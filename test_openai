@@ -1,0 +1,10 @@
+import openai
+
+try:
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": "Hello"}]
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
+    print(f"Error type: {type(e).__name__}")

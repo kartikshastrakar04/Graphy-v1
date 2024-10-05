@@ -39,7 +39,7 @@ def main():
             st.session_state['OPENAI_API_KEY'] = openai_api_key
             st.sidebar.success("OpenAI API Key set successfully.")
             embeddings = OpenAIEmbeddings()
-            llm = ChatOpenAI(model_name="gpt-4o")  # Use model that supports function calling
+            llm = ChatOpenAI(model_name="gpt-3.5-turbo-0125")  # Use model that supports function calling
             st.session_state['embeddings'] = embeddings
             st.session_state['llm'] = llm
     else:
